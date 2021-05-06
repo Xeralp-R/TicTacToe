@@ -45,6 +45,7 @@ qrc_overarching.cpp: overarching.qrc \
 		styles/gamesettings.qss \
 		styles/lorescreen.qss \
 		styles/victory.qss \
+		styles/tourneygame.qss \
 		styles/draw.qss \
 		styles/aboutus.qss \
 		styles/titular.qss \
@@ -139,9 +140,12 @@ moc_draw.cpp: draw.hpp \
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/Maybe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/Maybe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib draw.hpp -o moc_draw.cpp
 
 moc_tourneygame.cpp: tourneygame.hpp \
+		tttgame.hpp \
+		victory.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
+		draw.hpp \
+		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc

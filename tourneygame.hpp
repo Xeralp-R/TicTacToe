@@ -8,6 +8,8 @@
 #ifndef tourneygame_hpp
 #define tourneygame_hpp
 
+#include "tttgame.hpp"
+
 #include <QWidget>
 #include <QPushButton>
 #include <QString>
@@ -42,16 +44,6 @@ enum class ButtonOptions {
     NextToPlay = 3,
     FuturePlay = 4
 };
-std::map<ButtonOptions, QString> b_o_map {
-    {ButtonOptions::FinishedDraw, "finisheddraw"},
-    {ButtonOptions::Player1Won, "player1won"},
-    {ButtonOptions::Player2Won, "player2won"},
-    {ButtonOptions::NextToPlay, "nexttoplay"},
-    {ButtonOptions::FuturePlay, "futureplay"}
-};
-QString options_string(ButtonOptions option) {
-    return b_o_map.find(option)->second;
-}
 
 class TourneyButton : public QPushButton {
     Q_OBJECT
@@ -92,10 +84,11 @@ private slots:
     
     
     // when a single victory is achieced
-   // void solo_victory(int player_num);
+    void solo_victory(int player_num);
     // when a draw is achieved
-    //void solo_draw();
+    void solo_draw();
 signals:
+private:
     // ==> visible variables
     
     // --> top bit
@@ -128,11 +121,30 @@ signals:
         {"Eve", 'X', 0}
     };
     int current_turn;
+    bool has_ended = false;
     
     // --> functions
-    // visible functions
     void output();
     void format_button(TourneyButton * given_button);
+    void init_game();
+    void check_end();
+    void call_grand_victor(PlayerData winning_player_data);
+    void call_grand_draw();
+    
+    // --> screens
+    TTTGame * ttt_game;
+    
+    // other stuff
+    std::map<ButtonOptions, QString> button_option_map {
+        {ButtonOptions::FinishedDraw, "finisheddraw"},
+        {ButtonOptions::Player1Won, "player1won"},
+        {ButtonOptions::Player2Won, "player2won"},
+        {ButtonOptions::NextToPlay, "nexttoplay"},
+        {ButtonOptions::FuturePlay, "futureplay"}
+    };
+    QString options_string(ButtonOptions option) {
+        return button_option_map.find(option)->second;
+    }
 };
 
 #endif /* tourneygame_hpp */

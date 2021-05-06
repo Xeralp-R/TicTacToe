@@ -12,6 +12,7 @@
         <file>styles/tttgame.qss</file>
         <file>styles/victory.qss</file>
         <file>styles/draw.qss</file>
+        <file>styles/tourneygame.qss</file>
         <file>images/RexImage.png</file>
         <file>images/BrentImage.jpg</file>
     </qresource>

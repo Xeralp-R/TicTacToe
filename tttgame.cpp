@@ -289,16 +289,9 @@ bool TTTGame::check_full() {
 void TTTGame::call_victor(Players winning_player) {
     int player_num = static_cast<int>(winning_player);
     emit go_to_victory(player_num);
-    /*
-    int player_num = static_cast<int>(winning_player);
-    
-    victory_screen = new VictoryScreen(player_names[player_num], player_num);
-    connect(victory_screen, SIGNAL(back_to_title()), this, SLOT(from_victory()));
-    victory_screen->show();
-    this->hide();
     
     // delete in final version
-    
+    /*
     try {
         throw "Winner is Player ";
     } catch (const char* e) {
@@ -308,23 +301,11 @@ void TTTGame::call_victor(Players winning_player) {
      */
 }
 
-/*
-void TTTGame::from_victory() {
-    delete victory_screen;
-    this->show();
-    emit back_to_home();
-}*/
-
 void TTTGame::call_draw() {
     emit go_to_draw();
-    /*
-    draw_screen = new DrawScreen(player_names[1], player_names[2]);
-    connect(draw_screen, SIGNAL(back_to_title()), this, SLOT(from_draw()));
-    draw_screen->show();
-    this->hide();
     
     // delete in final version
-    
+    /*
     try {
         throw "Draw";
     } catch (const char* e) {
@@ -333,10 +314,3 @@ void TTTGame::call_draw() {
     }
      */
 }
-
-/*
-void TTTGame::from_draw() {
-    delete draw_screen;
-    this->show();
-    emit back_to_home();
-}*/

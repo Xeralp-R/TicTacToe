@@ -45,7 +45,7 @@ TTTButton#playertwo {
 }
 
 TTTButton QLabel {
-    font-family: "Quicksand", sans-serif;
+    font-family: "Quicksand", "Everson Mono Unicode", sans-serif;
     font-size: 70px;
     line-height: 0;
     text-transform: uppercase;
