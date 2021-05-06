@@ -1,0 +1,50 @@
+QWidget {
+    /*The General Background Color*/
+    background-color: #f4c220;
+    /*default font sizes and colors*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+QLabel#title {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 15px;
+    border-style: none none dotted none;
+    border-width: 0 0 5px 0;
+}
+
+QLabel#paragraph {
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    color: #000000;
+}
+
+QPushButton {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+QPushButton#finish {
+    background-color: #00a2ab;
+}
+QPushButton#finish:pressed {
+    background-color: #007d84;
+}
+QPushButton#playagain {
+    background-color: #db4472;
+}
+QPushButton#playagain:pressed {
+    background-color: #d0285b;
+}

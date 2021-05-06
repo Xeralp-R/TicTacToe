@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fonts/SIFONN.otf</file>
+        <file>music/Elephant.mp3</file>
+        <file>music/Elephant.wav</file>
+        <file>styles/titular.qss</file>
+        <file>styles/helpscreen.qss</file>
+        <file>styles/gamesettings.qss</file>
+        <file>styles/playersettings.qss</file>
+        <file>styles/aboutus.qss</file>
+        <file>styles/lorescreen.qss</file>
+        <file>styles/tttgame.qss</file>
+        <file>styles/victory.qss</file>
+        <file>styles/draw.qss</file>
+        <file>images/RexImage.png</file>
+        <file>images/BrentImage.jpg</file>
+    </qresource>
+</RCC>

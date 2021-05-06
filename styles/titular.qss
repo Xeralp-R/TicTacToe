@@ -1,0 +1,50 @@
+QWidget {
+    /*The General Background Color*/
+    background-color: #f4c220;
+    /*default font sizes and colors*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+QLabel {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 15px;
+    border-style: none none dotted none;
+    border-width: 0 0 5px 0;
+}
+
+QPushButton {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+QPushButton#button_to_game { background-color: #00a2ab; }
+QPushButton#button_to_game:pressed { background-color: #007d84; }
+QPushButton#button_to_sett { background-color: #00a2ab; }
+QPushButton#button_to_sett:pressed { background-color: #007d84; }
+QPushButton#button_to_abts { background-color: #00a2ab; }
+QPushButton#button_to_abts:pressed { background-color: #007d84; }
+QPushButton#button_to_help { background-color: #db4472; }
+QPushButton#button_to_help:pressed { background-color: #d0285b; }
+QPushButton#button_to_cust { background-color: #db4472; }
+QPushButton#button_to_cust:pressed { background-color: #d0285b; }
+QPushButton#button_to_lcns { background-color: #db4472; }
+QPushButton#button_to_lcns:pressed { background-color: #d0285b; }
+
+/*
+QFrame#line {
+    color: #000000;
+    border: 3px dotted;
+}
+*/

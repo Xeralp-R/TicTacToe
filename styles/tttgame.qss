@@ -1,0 +1,62 @@
+QWidget {
+    /*The General Background Color*/
+    background-color: #f4c220;
+    /*default font sizes and colors*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+QLabel {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+QLabel#playerone {
+    background-color: #00a2ab;
+}
+
+QLabel#playertwo {
+    background-color: #db4472;
+}
+
+TTTButton {
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20% 0%;
+}
+
+TTTButton:pressed {
+    background-color: #ebebeb;
+}
+
+TTTButton#playerone {
+    background-color: #00a2ab;
+}
+
+TTTButton#playertwo {
+    background-color: #db4472;
+}
+
+TTTButton QLabel {
+    font-family: "Quicksand", sans-serif;
+    font-size: 70px;
+    line-height: 0;
+    text-transform: uppercase;
+    color: #fdfff0;
+    background-color: #fdfff0;
+}
+
+TTTButton QLabel#playerone {
+    background-color: #00a2ab;
+}
+
+TTTButton QLabel#playertwo {
+    background-color: #db4472;
+}

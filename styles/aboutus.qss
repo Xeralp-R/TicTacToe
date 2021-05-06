@@ -1,0 +1,104 @@
+QWidget {
+    /*New Background color*/
+    background-color: #00a2ab;
+    /*general font stuff*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+QLabel#title {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #fdfff0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-style: none none dotted none;
+    border-width: 0 0 5px 0;
+    border-color: #ffffff;
+}
+
+QLabel#paragraph {
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    color: #fdfff0;
+    /*line-height: 1.3;*/
+}
+
+QPushButton {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+    background-color: #f4c220;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+QPushButton:pressed {
+    background-color: #cfa10a;
+}
+
+QGroupBox  {
+    border: 1px solid white;
+    /*
+    border-color: #FF17365D;
+    margin-top: 27px;
+    font-size: 14px;
+    */
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+
+QGroupBox::title  {
+    /*
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 8000px 5px 8000px;
+    background-color: #FF17365D;
+    */
+    color: #fdfff0;
+}
+
+/*The following text is copy-pasted diretly from QT:*/
+QScrollBar:vertical {
+    border: 1px solid rgb(200, 200, 200);
+    background: #00a2ab;
+    width: 15px;
+    margin: 22px 0 22px 0;
+}
+QScrollBar::handle:vertical {
+    border: 1px solid grey;
+    background: white;
+    min-height: 20px;
+}
+QScrollBar::add-line:vertical {
+    border: 1px solid rgb(200, 200, 200);
+    background: #00a2ab;
+    height: 20px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+    border: 1px solid rgb(200, 200, 200);
+    background: #00a2ab;
+    height: 20px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+    border: 2px solid rgb(200, 200, 200);
+    width: 3px;
+    height: 3px;
+    background: white;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
