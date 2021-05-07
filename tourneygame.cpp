@@ -23,7 +23,7 @@
 
 // ==> TourneyButton
 // Constructor
-TourneyButton::TourneyButton(QWidget * parent) : QPushButton(parent),
+TourneyButton::TourneyButton(QWidget * parent) : QPushButton(parent) ,
 button_state(ButtonOptions::FuturePlay), button_rel_location(-1) {
     button_text = new QLabel(" ");
     button_text->setAlignment(Qt::AlignCenter);
@@ -147,8 +147,12 @@ TourneyGame::TourneyGame(QString name1,
 }
 
 void TourneyGame::output() {
+    if (has_ended == true) {
+        return;
+    }
     // constants
     const QSize button_fixed_size (80, 80);
+    was_button_clicked = false;
     
     try {
         // set the state of the current turn button
@@ -199,12 +203,14 @@ void TourneyGame::format_button(TourneyButton * given_button) {
 
 void TourneyGame::button_clicked() {
     TourneyButton * given_button = static_cast<TourneyButton *>(sender());
-    if (given_button == array_buttons[current_turn]) {
+    if ((given_button == array_buttons[current_turn]) &&
+        (was_button_clicked == false)) {
         init_game();
     }
 }
 
 void TourneyGame::init_game() {
+    was_button_clicked = true;
     ttt_game = new TTTGame(player_data[1].name, player_data[2].name,
                            player_data[1].token, player_data[2].token);
     connect(ttt_game, SIGNAL(go_to_victory(int)), this, SLOT(solo_victory(int)));
@@ -219,14 +225,16 @@ void TourneyGame::solo_victory(int player_num) {
     array_buttons[current_turn]->setState(static_cast<ButtonOptions>(player_num));
     
     // delete that other screen
-    delete ttt_game;
+    // burden of deletion is shifted to check end
     
     // lets get back to outputting!
     current_turn += 1;
     check_end();
+    /*
     if (has_ended == false) {
         output();
     }
+     */
 }
 
 void TourneyGame::solo_draw() { 
@@ -234,42 +242,53 @@ void TourneyGame::solo_draw() {
     array_buttons[current_turn]->setState(ButtonOptions::FinishedDraw);
     
     // delete the other screen
-    delete ttt_game;
+    // burden of deletion is shifted to check_end
     
     // right back to outputting
     current_turn += 1;
     check_end();
+    /*
     if (has_ended == false) {
+        output();
+    }
+     */
+}
+
+void TourneyGame::check_end() {
+    ttt_game->hide();
+    delete ttt_game;
+    // to prevent dangling pointers?
+    ttt_game = nullptr;
+    
+    if (player_data[1].score >= 3) {
+        has_ended = true;
+        call_grand_victor(player_data[1]);
+        return;
+    } else if (player_data[2].score >= 3) {
+        has_ended = true;
+        call_grand_victor(player_data[2]);
+        return;
+    } else if (current_turn == 5) {
+        has_ended = true;
+        call_grand_draw();
+        return;
+    } else {
         output();
     }
 }
 
-void TourneyGame::check_end() { 
-    if ((player_data[1].score >= 3) && (has_ended == false)) {
-        has_ended = true;
-        call_grand_victor(player_data[1]);
-        return;
-    } else if ((player_data[2].score >= 3) && (has_ended == false)) {
-        has_ended = true;
-        call_grand_victor(player_data[2]);
-        return;
-    } else if ((current_turn == 5) && (has_ended == false)) {
-        has_ended = true;
-        call_grand_draw();
-        return;
-    }
-}
-
 void TourneyGame::call_grand_victor(PlayerData winning_player_data) {
+    emit to_grand_victory(winning_player_data.player_num);
+    /*
     QString str = winning_player_data.name;
     
+    this->hide();
     grand_victory_screen = new GrandVictoryScreen(winning_player_data.name,
                                                   winning_player_data.player_num);
     connect(grand_victory_screen, SIGNAL(back_to_title()),
             this, SLOT(from_grand_victory()));
     grand_victory_screen->show();
-    this->hide();
-    /*
+    
     try {
         throw "Winner is Player ";
     } catch (const char* e) {
@@ -278,21 +297,23 @@ void TourneyGame::call_grand_victor(PlayerData winning_player_data) {
     }
      */
 }
-
+/*
 void TourneyGame::from_grand_victory() {
     delete grand_victory_screen;
     this->show();
     
     emit to_home_screen();
 }
-
+*/
 void TourneyGame::call_grand_draw() {
+    emit to_grand_draw();
+    /*
+    this->hide();
     grand_draw_screen = new GrandDrawScreen();
     connect(grand_draw_screen, SIGNAL(back_to_title()),
             this, SLOT(from_grand_draw()));
     grand_draw_screen->show();
-    this->hide();
-    /*
+    
     try {
         throw "Draw";
     } catch (const char* e) {
@@ -301,10 +322,10 @@ void TourneyGame::call_grand_draw() {
     }
      */
 }
-
+/*
 void TourneyGame::from_grand_draw() {
     delete grand_draw_screen;
     this->show();
     
     emit to_home_screen();
-}
+}*/

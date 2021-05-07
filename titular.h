@@ -10,6 +10,7 @@
 #include "gameoptions.hpp"
 #include "victory.hpp"
 #include "draw.hpp"
+#include "tourneygame.hpp"
 
 #include <QWidget>
 #include <QString>
@@ -51,6 +52,11 @@ private slots:
     void from_victory();
     void solo_draw();
     void from_draw();
+    
+    void grand_victory(int num);
+    void from_grand_victory();
+    void grand_draw();
+    void from_grand_draw();
 private:
     // ==> Visible Things
     QFrame * line;
@@ -76,6 +82,13 @@ private:
     TTTGame * ttt_game;
     VictoryScreen * victory_screen;
     DrawScreen * draw_screen;
+    GrandVictoryScreen * grand_victory_screen;
+    GrandDrawScreen * grand_draw_screen;
+    TourneyGame * tourney_game;
+    
+    // ==> Functions
+    void solo_game_init();
+    void tourney_game_init();
     
     // ==> Invisible Things: Variables
     QString PlayerName1 = "Adam";

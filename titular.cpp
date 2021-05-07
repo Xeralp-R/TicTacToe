@@ -98,6 +98,19 @@ Titular::Titular(QWidget *parent) : QWidget(parent)
 // ==> Let's go to stuff
 
 void Titular::on_button_game_clicked() {
+    switch (game_option) {
+        case GameOptions::SoloGame:
+            solo_game_init();
+            break;
+        case GameOptions::TourneyGame:
+            tourney_game_init();
+            break;
+        default:
+            break;
+    }
+}
+
+void Titular::solo_game_init() {
     ttt_game = new TTTGame(this->player_names[1],
                            this->player_names[2],
                            this->player_chars[1],
@@ -106,6 +119,17 @@ void Titular::on_button_game_clicked() {
     connect(ttt_game, SIGNAL(go_to_victory(int)), this, SLOT(solo_victory(int)));
     connect(ttt_game, SIGNAL(go_to_draw()), this, SLOT(solo_draw()));
     ttt_game->show();
+    this->hide();
+}
+
+void Titular::tourney_game_init() {
+    tourney_game = new TourneyGame(this->player_names[1],
+                                   this->player_names[2],
+                                   this->player_chars[1],
+                                   this->player_chars[2]);
+    connect(tourney_game, SIGNAL(to_grand_victory(int)), this, SLOT(grand_victory(int)));
+    connect(tourney_game, SIGNAL(to_grand_draw()), this, SLOT(grand_draw()));
+    tourney_game->show();
     this->hide();
 }
 
@@ -151,6 +175,7 @@ void Titular::on_button_lore_clicked() {
 
 void Titular::solo_victory(int num) {
     delete ttt_game;
+    ttt_game = nullptr;
     
     victory_screen = new VictoryScreen(player_names[num], num);
     connect(victory_screen, SIGNAL(back_to_title()), this, SLOT(from_victory()));
@@ -170,6 +195,7 @@ void Titular::solo_victory(int num) {
 
 void Titular::solo_draw() {
     delete ttt_game;
+    ttt_game = nullptr;
     //this->show();
     
     draw_screen = new DrawScreen(player_names[1], player_names[2]);
@@ -188,21 +214,46 @@ void Titular::solo_draw() {
      */
 }
 
+void Titular::grand_victory(int num) {
+    tourney_game->hide();
+    delete tourney_game;
+    tourney_game = nullptr;
+    
+    grand_victory_screen = new GrandVictoryScreen(player_names[num], num);
+    connect(grand_victory_screen, SIGNAL(back_to_title()), this, SLOT(from_grand_victory()));
+    grand_victory_screen->show();
+    this->hide();
+}
+
+void Titular::grand_draw() {
+    tourney_game->hide();
+    delete tourney_game;
+    tourney_game = nullptr;
+    
+    grand_draw_screen = new GrandDrawScreen;
+    connect(grand_draw_screen, SIGNAL(back_to_title()), this, SLOT(from_grand_draw()));
+    grand_draw_screen->show();
+    this->hide();
+}
+
 // ==> On back from stuff
 
 void Titular::on_back_from_game() {
     delete ttt_game;
+    ttt_game = nullptr;
     this->show();
 }
 
 void Titular::on_back_from_help() {
     delete help_screen;
+    help_screen = nullptr;
     this->show();
 }
 
 void Titular::on_back_from_sett() {
     this->game_option = game_settings->getGameOption();
     delete game_settings;
+    game_settings = nullptr;
     this->show();
 }
 
@@ -212,25 +263,42 @@ void Titular::on_back_from_cust() {
     this->player_chars[1] = player_settings->Char1();
     this->player_chars[2] = player_settings->Char2();
     delete player_settings;
+    player_settings = nullptr;
     this->show();
 }
 
 void Titular::on_back_from_abts() {
     delete about_us;
+    about_us = nullptr;
     this->show();
 }
 
 void Titular::on_back_from_lore() {
     delete lore_screen;
+    lore_screen = nullptr;
     this->show();
 }
 
 void Titular::from_victory() {
     delete victory_screen;
+    victory_screen = nullptr;
     this->show();
 }
 
 void Titular::from_draw() {
     delete draw_screen;
+    draw_screen = nullptr;
+    this->show();
+}
+
+void Titular::from_grand_victory() {
+    delete grand_victory_screen;
+    grand_victory_screen = nullptr;
+    this->show();
+}
+
+void Titular::from_grand_draw() {
+    delete grand_draw_screen;
+    grand_draw_screen = nullptr;
     this->show();
 }

@@ -91,11 +91,13 @@ private slots:
     // when a draw is achieved
     void solo_draw();
     // get back from the grand draw screen
-    void from_grand_draw();
+    //void from_grand_draw();
     // from the grand victory screen
-    void from_grand_victory();
+    //void from_grand_victory();
 signals:
     void to_home_screen();
+    void to_grand_victory(int num);
+    void to_grand_draw();
 private:
     // ==> visible variables
     
@@ -130,6 +132,7 @@ private:
     };
     int current_turn;
     bool has_ended = false;
+    bool was_button_clicked = true;
     
     // --> functions
     void output();

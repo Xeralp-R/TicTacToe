@@ -1,0 +1,98 @@
+QWidget {
+    /*The General Background Color*/
+    background-color: #f4c220;
+    /*default font sizes and colors*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+QLabel#title {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #000000;
+    padding-bottom: 15px;
+    border-style: none none dotted none;
+    border-width: 0 0 5px 0;
+}
+
+QGroupBox  {
+    border: 1px solid #000000;
+    /*
+    border-color: #FF17365D;
+    margin-top: 27px;
+    font-size: 14px;
+    */
+    border-radius: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+}
+
+QGroupBox::title  {
+    /*
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px 8000px 5px 8000px;
+    background-color: #FF17365D;
+    */
+    color: #000000;
+}
+
+QLabel#player1name {
+    background-color: #00a2ab;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+QLabel#player2name {
+    background-color: #db4472;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+QLabel#number {
+    background-color: transparent;
+    font-family: "Quicksand", "Sifonn", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+TourneyButton {
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20% 0%;
+}
+
+TourneyButton#futureplay {
+    background-color:#808080;
+}
+
+TourneyButton#player1won {
+    background-color: #00a2ab;
+}
+
+TourneyButton#player2won {
+    background-color: #db4472;
+}
+
+TourneyButton#finisheddraw {
+    background-color: #000000;
+}
+
+TourneyButton QLabel {
+    font-family: "Quicksand", sans-serif;
+    font-size: 70px;
+    line-height: 0;
+    text-transform: uppercase;
+    color: #fdfff0;
+    background-color: transparent;
+}

@@ -1,0 +1,74 @@
+QWidget {
+    /*The General Background Color
+    background-color: #f4c220;*/
+    /*default font sizes and colors*/
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+QWidget#player1 {
+    background-color: #00a2ab;
+}
+
+QWidget#player2 {
+    background-color: #db4472;
+}
+
+QLabel#title {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    line-height: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+QLabel#paragraph {
+    font-family: "Quicksand", sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+}
+/*
+QLabel#player1 {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 10px;
+    padding-top: 10px;
+    background-color: #00a2ab;
+    padding-bottom: 15px;
+    border-style: none none dotted none;
+    border-width: 0 0 5px 0;
+    
+}
+*/
+
+QLabel#namebox {
+    font-family: "Sifonn", sans-serif;
+    font-size: 60px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 10px;
+    padding-top: 10px;
+    /*
+    background-color: #db4472;
+    padding-bottom: 15px;
+    border-style: none none dotted none;
+    border-width: 0 0 5px 0;
+    */
+}
+
+QPushButton {
+    font-family: "Quicksand", "Everson Mono Unicode", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: #f4c220;
+    color: #000000;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}

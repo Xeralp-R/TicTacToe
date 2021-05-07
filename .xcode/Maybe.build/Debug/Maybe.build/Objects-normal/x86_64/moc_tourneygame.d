@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/Maybe/moc_titular.cpp \
-  titular.h helpscreen.h \
+  /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/Maybe/moc_tourneygame.cpp \
+  tourneygame.hpp tttgame.hpp victory.hpp \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
@@ -84,42 +84,10 @@ dependencies: \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers/qcursor.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers/qkeysequence.h \
-  gamesettings.h gameoptions.hpp \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/QMediaPlayer \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediaplayer.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qtmultimediaglobal.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qtmultimedia-config.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediaobject.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmultimedia.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediacontent.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediaresource.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qmap.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers/qnetworkrequest.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers/qtnetworkglobal.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers/qtnetwork-config.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QSharedDataPointer \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QUrl \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qurl.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QVariant \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qvariant.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediaenumdebug.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qmetaobject.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qdebug.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qtextstream.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qlocale.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qset.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qcontiguouscache.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qaudio.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers/qnetworkconfiguration.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QSlider \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qabstractslider.h \
-  playersettings.hpp \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-  aboutus.hpp tttgame.hpp victory.hpp draw.hpp \
+  draw.hpp \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers/qicon.h \
-  tourneygame.hpp
+  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar
