@@ -8,6 +8,8 @@
 #include "tourneygame.hpp"
 
 #include "tttgame.hpp"
+#include "draw.hpp"
+#include "victory.hpp"
 
 #include <QPushButton>
 #include <QLabel>
@@ -70,8 +72,10 @@ TourneyGame::TourneyGame(QString name1,
     // name
     player_data[1].name = name1;
     player_data[1].token = char1;
+    player_data[1].player_num = 1;
     player_data[2].name = name2;
     player_data[2].token = char2;
+    player_data[2].player_num = 2;
     
     // prepare the screen
     setMinimumSize(600, 450);
@@ -219,7 +223,10 @@ void TourneyGame::solo_victory(int player_num) {
     
     // lets get back to outputting!
     current_turn += 1;
-    output();
+    check_end();
+    if (has_ended == false) {
+        output();
+    }
 }
 
 void TourneyGame::solo_draw() { 
@@ -255,19 +262,49 @@ void TourneyGame::check_end() {
 
 void TourneyGame::call_grand_victor(PlayerData winning_player_data) {
     QString str = winning_player_data.name;
+    
+    grand_victory_screen = new GrandVictoryScreen(winning_player_data.name,
+                                                  winning_player_data.player_num);
+    connect(grand_victory_screen, SIGNAL(back_to_title()),
+            this, SLOT(from_grand_victory()));
+    grand_victory_screen->show();
+    this->hide();
+    /*
     try {
         throw "Winner is Player ";
     } catch (const char* e) {
         std::cerr << "exception: " << e << str.toStdString() << "\n";
         return;
     }
+     */
 }
 
-void TourneyGame::call_grand_draw() { 
+void TourneyGame::from_grand_victory() {
+    delete grand_victory_screen;
+    this->show();
+    
+    emit to_home_screen();
+}
+
+void TourneyGame::call_grand_draw() {
+    grand_draw_screen = new GrandDrawScreen();
+    connect(grand_draw_screen, SIGNAL(back_to_title()),
+            this, SLOT(from_grand_draw()));
+    grand_draw_screen->show();
+    this->hide();
+    /*
     try {
         throw "Draw";
     } catch (const char* e) {
         std::cerr << "exception: " << e << "\n";
         return;
     }
+     */
+}
+
+void TourneyGame::from_grand_draw() {
+    delete grand_draw_screen;
+    this->show();
+    
+    emit to_home_screen();
 }

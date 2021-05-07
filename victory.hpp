@@ -42,4 +42,31 @@ private:
     int winner_number;
 };
 
+// essentially the same as the victory screen,
+// but I can't inherit its properties,
+// so i'm just copy-pasting.
+class GrandVictoryScreen : public QWidget {
+    Q_OBJECT
+public:
+    explicit GrandVictoryScreen(QString name,
+                                int number,
+                                QWidget * parent = nullptr);
+signals:
+    void back_to_title();
+private:
+    // ==> visible
+    QVBoxLayout * layout_general;
+    QLabel * titlebox;
+    QLabel * alsotitlebox;
+    QLabel * namebox;
+    QLabel * textbox;
+    QHBoxLayout * layout_buttons;
+    QPushButton * button_play;
+    QPushButton * button_finish;
+    
+    // ==> invisible
+    QString winner_name;
+    int winner_number;
+};
+
 #endif /* victory_hpp */

@@ -9,6 +9,8 @@
 #define tourneygame_hpp
 
 #include "tttgame.hpp"
+#include "draw.hpp"
+#include "victory.hpp"
 
 #include <QWidget>
 #include <QPushButton>
@@ -31,10 +33,11 @@ struct PlayerData {
     QString name;
     QChar token;
     int score;
+    int player_num;
     
     // sole constructor
-    PlayerData (QString str, QChar ch, int num) :
-    name(str), token(ch), score(num) {};
+    PlayerData (QString str, QChar ch, int num, int num2) :
+    name(str), token(ch), score(num), player_num(num2) {};
 };
 
 enum class ButtonOptions {
@@ -87,7 +90,12 @@ private slots:
     void solo_victory(int player_num);
     // when a draw is achieved
     void solo_draw();
+    // get back from the grand draw screen
+    void from_grand_draw();
+    // from the grand victory screen
+    void from_grand_victory();
 signals:
+    void to_home_screen();
 private:
     // ==> visible variables
     
@@ -116,9 +124,9 @@ private:
     
     // --> variables
     std::vector<PlayerData> player_data {
-        {"Nullius", ' ', 0},
-        {"Adam", 'O', 0},
-        {"Eve", 'X', 0}
+        {"Nullius", ' ', 0, 0},
+        {"Adam", 'O', 0, 1},
+        {"Eve", 'X', 0, 2}
     };
     int current_turn;
     bool has_ended = false;
@@ -133,6 +141,8 @@ private:
     
     // --> screens
     TTTGame * ttt_game;
+    GrandVictoryScreen * grand_victory_screen;
+    GrandDrawScreen * grand_draw_screen;
     
     // other stuff
     std::map<ButtonOptions, QString> button_option_map {

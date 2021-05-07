@@ -44,8 +44,10 @@ qrc_overarching.cpp: overarching.qrc \
 		images/BrentImage.jpg \
 		styles/gamesettings.qss \
 		styles/lorescreen.qss \
+		styles/grandvictory.qss \
 		styles/victory.qss \
 		styles/tourneygame.qss \
+		styles/granddraw.qss \
 		styles/draw.qss \
 		styles/aboutus.qss \
 		styles/titular.qss \
