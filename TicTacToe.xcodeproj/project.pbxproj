@@ -1,0 +1,1022 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+		5E618435888B9D49F8540165 = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Qmake";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -f TicTacToe.xcodeproj/qt_makeqmake.mak";
+			showEnvVarsInLog = "0";
+		};
+		5E365BD8DA887D29EF88A6FB = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/helpscreen.cpp";
+			name = "helpscreen.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		26927F8117B9E00A2081DC58 = {
+			fileRef = "5E365BD8DA887D29EF88A6FB";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		923005BEDEC582081EBF20DF = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/main.cpp";
+			name = "main.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		C57AE70DC0439E31946202DA = {
+			fileRef = "923005BEDEC582081EBF20DF";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		3459D2C2E9954488FF7F7C91 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/titular.cpp";
+			name = "titular.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		E1CC4CE921A574003ABC67C5 = {
+			fileRef = "3459D2C2E9954488FF7F7C91";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		140DF7D04DC0D4FFAB17D3CF = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/gamesettings.cpp";
+			name = "gamesettings.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		3DBD3E621EC16CB23DB08B83 = {
+			fileRef = "140DF7D04DC0D4FFAB17D3CF";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		A520F781E2A4E4F84EC4C8D0 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/playersettings.cpp";
+			name = "playersettings.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		54C037667E7EF94374863A0F = {
+			fileRef = "A520F781E2A4E4F84EC4C8D0";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		825A8EC783A4C0D5988BC3E1 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/aboutus.cpp";
+			name = "aboutus.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		22CAB5D8D919CE3358D503B0 = {
+			fileRef = "825A8EC783A4C0D5988BC3E1";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		2DB0F9AC8A0DE09DE5428689 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/tttgame.cpp";
+			name = "tttgame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		6AA18A087FE9D7E6FC9E7B91 = {
+			fileRef = "2DB0F9AC8A0DE09DE5428689";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		CA4FBA33CE2C73B981023BDF = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/victory.cpp";
+			name = "victory.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		72CE09AD277C1A340DC05E8B = {
+			fileRef = "CA4FBA33CE2C73B981023BDF";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		A32E2143145FA47AFB83862F = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/draw.cpp";
+			name = "draw.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		017531FFD36A07431C2DEDC6 = {
+			fileRef = "A32E2143145FA47AFB83862F";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		20CA500116EC6D29C43D3E7A = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/tourneygame.cpp";
+			name = "tourneygame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		A7740F26D89FD59E415A8A2F = {
+			fileRef = "20CA500116EC6D29C43D3E7A";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		11289CD9957D6346E0E29424 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/qrc_overarching.cpp";
+			name = "qrc_overarching.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		92DC8C267DA16B6564333974 = {
+			fileRef = "11289CD9957D6346E0E29424";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		8C050C2BFD599FEC3F7ED0DE = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_helpscreen.cpp";
+			name = "moc_helpscreen.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		53CD322A169E37F7CC4BC7F3 = {
+			fileRef = "8C050C2BFD599FEC3F7ED0DE";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		B1D9CEB8DE7996E48A3148B3 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_titular.cpp";
+			name = "moc_titular.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		E0E44593EFB7F096D568251E = {
+			fileRef = "B1D9CEB8DE7996E48A3148B3";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		592828D20D2F983BC062665D = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_gamesettings.cpp";
+			name = "moc_gamesettings.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		C277E472F750B3EE24FE2902 = {
+			fileRef = "592828D20D2F983BC062665D";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		92A4B34D17ACDCF780F30A38 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_playersettings.cpp";
+			name = "moc_playersettings.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		871FBC12AAC212A4E416DCEC = {
+			fileRef = "92A4B34D17ACDCF780F30A38";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		AA10429583C5E9A76BD13922 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_aboutus.cpp";
+			name = "moc_aboutus.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		B0A70E6F272E1119855B94BD = {
+			fileRef = "AA10429583C5E9A76BD13922";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		3BD51935CDFB27F82BC2A7EC = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_tttgame.cpp";
+			name = "moc_tttgame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		32496916376EA8BB931D9753 = {
+			fileRef = "3BD51935CDFB27F82BC2A7EC";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		649841CA0C063E430F8C028A = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_victory.cpp";
+			name = "moc_victory.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		3BA7F5AED27B86A53E4A7BEF = {
+			fileRef = "649841CA0C063E430F8C028A";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		EE59473F131B0D48EBACE21C = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_draw.cpp";
+			name = "moc_draw.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		74BC356409461F39659FC053 = {
+			fileRef = "EE59473F131B0D48EBACE21C";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		24F825D6FE22D5853946179D = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_tourneygame.cpp";
+			name = "moc_tourneygame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		7E5E4187CC2D39C8F7F7F349 = {
+			fileRef = "24F825D6FE22D5853946179D";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		39B374EECC832CB4802EF014 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/helpscreen.h";
+			name = "helpscreen.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		6A03AE140EAA7D806D4EB839 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/titular.h";
+			name = "titular.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		3254BA99D7455C6F209D9F89 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/gamesettings.h";
+			name = "gamesettings.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		37D4E747CE6729EB6DD6C571 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/playersettings.hpp";
+			name = "playersettings.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		2B701DE2B8E6F04CC4AB56C5 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/aboutus.hpp";
+			name = "aboutus.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		8ABD7894E592736304370821 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/tttgame.hpp";
+			name = "tttgame.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		3EEE8C03D3E0CFB76B3E3A9D = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/victory.hpp";
+			name = "victory.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		FBEA0D9B6FB330642935DEB2 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/draw.hpp";
+			name = "draw.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		1C27B6BD39CD736661EC6FD9 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/tourneygame.hpp";
+			name = "tourneygame.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		8B3FE97C47A628FE14C888C7 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/overarching.qrc";
+			name = "overarching.qrc";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		5E014DB773C78DC27D884C05 = {
+			fileRef = "8B3FE97C47A628FE14C888C7";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		05A2EBC5F526E0CDB8072666 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/features/data/dummy.cpp";
+			name = "dummy.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		011868899A1B3382E0C0973E = {
+			fileRef = "05A2EBC5F526E0CDB8072666";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
+		2720D8D6873CA47A3314FE64 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/TicTacToe.pro";
+			name = "TicTacToe.pro";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "text";
+		};
+		500EC1F6BADB1053735A5F46 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/.qmake.stash";
+			name = ".qmake.stash";
+			sourceTree = "<absolute>";
+		};
+		25B08E2869634E9BCBA333A2 = {
+			isa = PBXGroup;
+			children = (
+				"11289CD9957D6346E0E29424",
+				"8C050C2BFD599FEC3F7ED0DE",
+				"B1D9CEB8DE7996E48A3148B3",
+				"592828D20D2F983BC062665D",
+				"92A4B34D17ACDCF780F30A38",
+				"AA10429583C5E9A76BD13922",
+				"3BD51935CDFB27F82BC2A7EC",
+				"649841CA0C063E430F8C028A",
+				"EE59473F131B0D48EBACE21C",
+				"24F825D6FE22D5853946179D");
+			name = "Generated Sources";
+			sourceTree = "<group>";
+		};
+		87DF60DE337FB58864343E39 = {
+			isa = PBXGroup;
+			children = (
+				"8B3FE97C47A628FE14C888C7");
+			name = "Resources";
+			sourceTree = "<group>";
+		};
+		2EB56BE3C2D93CDAB0C52E67 = {
+			isa = PBXGroup;
+			children = (
+				"5E365BD8DA887D29EF88A6FB",
+				"923005BEDEC582081EBF20DF",
+				"3459D2C2E9954488FF7F7C91",
+				"140DF7D04DC0D4FFAB17D3CF",
+				"A520F781E2A4E4F84EC4C8D0",
+				"825A8EC783A4C0D5988BC3E1",
+				"2DB0F9AC8A0DE09DE5428689",
+				"CA4FBA33CE2C73B981023BDF",
+				"A32E2143145FA47AFB83862F",
+				"20CA500116EC6D29C43D3E7A",
+				"39B374EECC832CB4802EF014",
+				"6A03AE140EAA7D806D4EB839",
+				"3254BA99D7455C6F209D9F89",
+				"37D4E747CE6729EB6DD6C571",
+				"2B701DE2B8E6F04CC4AB56C5",
+				"8ABD7894E592736304370821",
+				"3EEE8C03D3E0CFB76B3E3A9D",
+				"FBEA0D9B6FB330642935DEB2",
+				"1C27B6BD39CD736661EC6FD9");
+			name = "Sources";
+			sourceTree = "<group>";
+		};
+		B8254625CFD509ED2A24A166 = {
+			isa = PBXGroup;
+			children = (
+				"05A2EBC5F526E0CDB8072666");
+			name = "Sources [moc_predefs]";
+			sourceTree = "<group>";
+		};
+		74B182DB50CB5611B5C1C297 = {
+			isa = PBXGroup;
+			children = (
+				"2720D8D6873CA47A3314FE64",
+				"500EC1F6BADB1053735A5F46");
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EF0942E79C014DCEC8976BC = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXShellScriptBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Qt Preprocessors";
+			shellPath = "/bin/sh";
+			shellScript = "make -C /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -f TicTacToe.xcodeproj/qt_preprocess.mak";
+			showEnvVarsInLog = "0";
+		};
+		F7E50F631C51CD5B5DC0BC43 = {
+			buildActionMask = 2147483647;
+			files = (
+				"26927F8117B9E00A2081DC58",
+				"C57AE70DC0439E31946202DA",
+				"E1CC4CE921A574003ABC67C5",
+				"3DBD3E621EC16CB23DB08B83",
+				"54C037667E7EF94374863A0F",
+				"22CAB5D8D919CE3358D503B0",
+				"6AA18A087FE9D7E6FC9E7B91",
+				"72CE09AD277C1A340DC05E8B",
+				"017531FFD36A07431C2DEDC6",
+				"A7740F26D89FD59E415A8A2F",
+				"92DC8C267DA16B6564333974",
+				"53CD322A169E37F7CC4BC7F3",
+				"E0E44593EFB7F096D568251E",
+				"C277E472F750B3EE24FE2902",
+				"871FBC12AAC212A4E416DCEC",
+				"B0A70E6F272E1119855B94BD",
+				"32496916376EA8BB931D9753",
+				"3BA7F5AED27B86A53E4A7BEF",
+				"74BC356409461F39659FC053",
+				"7E5E4187CC2D39C8F7F7F349",
+				"011868899A1B3382E0C0973E");
+			isa = PBXSourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Compile Sources";
+		};
+		A219927E249717778571C1C2 = {
+			isa = PBXFileReference;
+			name = "QtMultimedia.framework";
+			path = "/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		EB8B8A3725CC6417FDF807CF = {
+			fileRef = "A219927E249717778571C1C2";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		16D365E0E492C6E18E16CBC4 = {
+			isa = PBXFileReference;
+			name = "QtWidgets.framework";
+			path = "/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		58B76BF749FC404B45BCB883 = {
+			fileRef = "16D365E0E492C6E18E16CBC4";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		FB7983D61652FF4A6903DDA8 = {
+			isa = PBXFileReference;
+			name = "QtGui.framework";
+			path = "/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		9318A43DACA73CF2B80F971E = {
+			fileRef = "FB7983D61652FF4A6903DDA8";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		723F90793B2C195E2CCB2233 = {
+			isa = PBXFileReference;
+			name = "AppKit.framework";
+			path = "/System/Library/Frameworks/AppKit.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		F2A75ACAC9DF6A3F4E5711E7 = {
+			fileRef = "723F90793B2C195E2CCB2233";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		1B2543FCC48E9436F21C4F63 = {
+			isa = PBXFileReference;
+			name = "Metal.framework";
+			path = "/System/Library/Frameworks/Metal.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		B3FE8FAC746D3D5BB24FA398 = {
+			fileRef = "1B2543FCC48E9436F21C4F63";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		BE05041F97D33C51D3F9BD07 = {
+			isa = PBXFileReference;
+			name = "QtNetwork.framework";
+			path = "/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		5B2935C6C6346B9FCC5F4E32 = {
+			fileRef = "BE05041F97D33C51D3F9BD07";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D07B036891CB961A9A9AF035 = {
+			isa = PBXFileReference;
+			name = "QtCore.framework";
+			path = "/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		1ACE245EBE3405CD51079343 = {
+			fileRef = "D07B036891CB961A9A9AF035";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		2B774D8E4178765CE52EAAF5 = {
+			isa = PBXFileReference;
+			name = "DiskArbitration.framework";
+			path = "/System/Library/Frameworks/DiskArbitration.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		A99B2AA0F9CBBDD12BA126A4 = {
+			fileRef = "2B774D8E4178765CE52EAAF5";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		A1A67BEAA744704B29168D39 = {
+			isa = PBXFileReference;
+			name = "IOKit.framework";
+			path = "/System/Library/Frameworks/IOKit.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		8D267F2E4776F0ECA2F49DC8 = {
+			fileRef = "A1A67BEAA744704B29168D39";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		D4B32C2222F82AC56BADEB21 = {
+			isa = PBXFileReference;
+			name = "OpenGL.framework";
+			path = "/System/Library/Frameworks/OpenGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		8771A8C96E9C391044035D99 = {
+			fileRef = "D4B32C2222F82AC56BADEB21";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		8D9815BDB5BD9F90D2BC05C5 = {
+			isa = PBXFileReference;
+			name = "AGL.framework";
+			path = "/System/Library/Frameworks/AGL.framework";
+			refType = 0;
+			sourceTree = "<absolute>";
+			lastKnownFileType = "wrapper.framework";
+		};
+		E45E51A644D5FC9F942ECE55 = {
+			fileRef = "8D9815BDB5BD9F90D2BC05C5";
+			isa = PBXBuildFile;
+			settings = {
+			};
+		};
+		AF39DD055C3EF8226FBE929D = {
+			children = (
+				"A219927E249717778571C1C2",
+				"16D365E0E492C6E18E16CBC4",
+				"FB7983D61652FF4A6903DDA8",
+				"723F90793B2C195E2CCB2233",
+				"1B2543FCC48E9436F21C4F63",
+				"BE05041F97D33C51D3F9BD07",
+				"D07B036891CB961A9A9AF035",
+				"2B774D8E4178765CE52EAAF5",
+				"A1A67BEAA744704B29168D39",
+				"D4B32C2222F82AC56BADEB21",
+				"8D9815BDB5BD9F90D2BC05C5");
+			isa = PBXGroup;
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		D1C883685E82D5676953459A = {
+			buildActionMask = 2147483647;
+			files = (
+				"EB8B8A3725CC6417FDF807CF",
+				"58B76BF749FC404B45BCB883",
+				"9318A43DACA73CF2B80F971E",
+				"F2A75ACAC9DF6A3F4E5711E7",
+				"B3FE8FAC746D3D5BB24FA398",
+				"5B2935C6C6346B9FCC5F4E32",
+				"1ACE245EBE3405CD51079343",
+				"A99B2AA0F9CBBDD12BA126A4",
+				"8D267F2E4776F0ECA2F49DC8",
+				"8771A8C96E9C391044035D99",
+				"E45E51A644D5FC9F942ECE55");
+			isa = PBXFrameworksBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Link Binary With Libraries";
+		};
+		30414803F31797EB689AE508 = {
+			buildActionMask = 2147483647;
+			files = (
+				);
+			isa = PBXResourcesBuildPhase;
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Copy Bundle Resources";
+		};
+		99542592E9780B9225F24AA8 = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BB0C9A254B60E24DD956DA6 = {
+			isa = PBXFileReference;
+			includeInIndex = 0;
+			explicitFileType = "wrapper.application";
+			path = "TicTacToe.app";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE0A091FDBFB3E9C31B7A1BD = {
+			children = (
+				"4BB0C9A254B60E24DD956DA6");
+			isa = PBXGroup;
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		E8C543AB96796ECAA2E65C57 = {
+			children = (
+				"2EB56BE3C2D93CDAB0C52E67",
+				"25B08E2869634E9BCBA333A2",
+				"87DF60DE337FB58864343E39",
+				"B8254625CFD509ED2A24A166",
+				"74B182DB50CB5611B5C1C297",
+				"AF39DD055C3EF8226FBE929D",
+				"FE0A091FDBFB3E9C31B7A1BD");
+			isa = PBXGroup;
+			name = "TicTacToe";
+			sourceTree = "<group>";
+		};
+		C5ED99F5DE5DE250406C4053 = {
+			buildPhases = (
+				"5E618435888B9D49F8540165",
+				"7EF0942E79C014DCEC8976BC");
+			dependencies = (
+				);
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXAggregateTarget;
+			buildRules = (
+);
+			productName = "Qt Preprocess";
+			name = "Qt Preprocess";
+		};
+		0FD0F81F8A51FEB2C5142267 = {
+			isa = PBXTargetDependency;
+			target = "C5ED99F5DE5DE250406C4053";
+		};
+		66922F191B74FDB51BA44F37 = {
+			buildPhases = (
+				"F7E50F631C51CD5B5DC0BC43",
+				"D1C883685E82D5676953459A",
+				"30414803F31797EB689AE508",
+				"99542592E9780B9225F24AA8");
+			dependencies = (
+				"0FD0F81F8A51FEB2C5142267");
+			productReference = "4BB0C9A254B60E24DD956DA6";
+			buildConfigurationList = 6CC3B5D2136C7CD6A5CF5A59;
+			isa = PBXNativeTarget;
+			buildRules = (
+);
+			productType = "com.apple.product-type.application";
+			name = "TicTacToe";
+			productName = "TicTacToe";
+		};
+		3AA6C32AC930069E80220CF1 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "TicTacToe";
+				QMAKE_FULL_VERSION = "1.0.0";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = "1.0";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "Info.plist";
+				SYMROOT = ".xcode";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				MACOSX_DEPLOYMENT_TARGET = "10.13";
+				HEADER_SEARCH_PATHS = (
+					".",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers",
+					".",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib",
+					"/System/Library/Frameworks/");
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib");
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-Wextra",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O2",
+					"-std=gnu++11",
+					"-Wall",
+					"-Wextra",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-stdlib=libc++",
+						"-headerpad_max_install_names",
+						"-Wl,-rpath,@executable_path/../Frameworks",
+						"-Wl,-rpath,/Users/mariquitreventar/Qt/5.15.2/clang_64/lib",
+						"-F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib");
+				ARCHS = "x86_64";
+			};
+			name = "Debug";
+		};
+		77418F46922677BB04ED38DD = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				GCC_OPTIMIZATION_LEVEL = "0";
+				ONLY_ACTIVE_ARCH = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "TicTacToe";
+				QMAKE_FULL_VERSION = "1.0.0";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = "1.0";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				PRODUCT_NAME = "TicTacToe";
+			};
+			name = "Debug";
+		};
+		339EE1B2CC4FC24589A0EA95 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "TicTacToe";
+				QMAKE_FULL_VERSION = "1.0.0";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = "1.0";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				CC = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang";
+				LDPLUSPLUS = "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++";
+				INFOPLIST_FILE = "Info.plist";
+				SYMROOT = ".xcode";
+				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				DYLIB_CURRENT_VERSION = "1.0.0";
+				DYLIB_COMPATIBILITY_VERSION = "1.0";
+				MACOSX_DEPLOYMENT_TARGET = "10.13";
+				HEADER_SEARCH_PATHS = (
+					".",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers",
+					".",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers",
+					"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/AGL.framework/Headers",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang");
+				LIBRARY_SEARCH_PATHS = (
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib",
+					"/System/Library/Frameworks/");
+				FRAMEWORK_SEARCH_PATHS = (
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib",
+					"/Users/mariquitreventar/Qt/5.15.2/clang_64/lib");
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-Wextra",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-stdlib=libc++",
+					"-O2",
+					"-std=gnu++11",
+					"-Wall",
+					"-Wextra",
+					"-fPIC",
+					"-DQT_NO_DEBUG",
+					"-DQT_MULTIMEDIA_LIB",
+					"-DQT_WIDGETS_LIB",
+					"-DQT_GUI_LIB",
+					"-DQT_NETWORK_LIB",
+					"-DQT_CORE_LIB");
+				OTHER_LDFLAGS = (
+						"-stdlib=libc++",
+						"-headerpad_max_install_names",
+						"-Wl,-rpath,@executable_path/../Frameworks",
+						"-Wl,-rpath,/Users/mariquitreventar/Qt/5.15.2/clang_64/lib",
+						"-F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib");
+				ARCHS = "x86_64";
+			};
+			name = "Release";
+		};
+		6666AA5E688052234F6758D8 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = "NO";
+				"ARCHS[sdk=macosx*]" = "x86_64";
+				COPY_PHASE_STRIP = "NO";
+				ENABLE_BITCODE = "NO";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompany.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "TicTacToe";
+				QMAKE_FULL_VERSION = "1.0.0";
+				QMAKE_PKGINFO_TYPEINFO = "????";
+				QMAKE_SHORT_VERSION = "1.0";
+				QT_LIBRARY_SUFFIX = "";
+				SDKROOT = "macosx";
+				PRODUCT_NAME = "TicTacToe";
+			};
+			name = "Release";
+		};
+		DAC4C1AA5EDEA1C85E9CA5E6 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"3AA6C32AC930069E80220CF1",
+				"339EE1B2CC4FC24589A0EA95");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		6CC3B5D2136C7CD6A5CF5A59 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				"77418F46922677BB04ED38DD",
+				"6666AA5E688052234F6758D8");
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "Release";
+		};
+		6DB9C3763D02B1415CD9D565 = {
+			hasScannedForEncodings = 1;
+			compatibilityVersion = "Xcode 3.2";
+			isa = PBXProject;
+			mainGroup = "E8C543AB96796ECAA2E65C57";
+			productRefGroup = "FE0A091FDBFB3E9C31B7A1BD";
+			buildConfigurationList = "DAC4C1AA5EDEA1C85E9CA5E6";
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"66922F191B74FDB51BA44F37",
+				"C5ED99F5DE5DE250406C4053");
+			attributes = {
+				TargetAttributes = {
+				};
+			};
+		};
+	};
+	rootObject = "6DB9C3763D02B1415CD9D565";
+}
