@@ -94,6 +94,7 @@ AboutUs::AboutUs (QWidget * parent) : QWidget(parent) {
                          "The co-creator, Rex, does not know Malabon exists— "
                          "please don't bother informing him. "
                          "My hobbies include watching anime. "
+                         "May or may not be a megalomaniac. "
                          "(This description was written by Rex.)"
                          );
     abts_b2layout = new QVBoxLayout();
