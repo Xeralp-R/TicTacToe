@@ -41,6 +41,8 @@ private slots:
     // this game option will be sent to the titular
     void clicked_sologame();
     void clicked_tourneygame();
+    void clicked_brentrbtgame();
+    void clicked_randrbtgame();
 private:
     // ==> Variable
     GameOptions current_style;
@@ -56,6 +58,8 @@ private:
     QLabel * gsettings_subtitle1;
     QRadioButton * gsettings_choice1_1;
     QRadioButton * gsettings_choice1_2;
+    QRadioButton * gsettings_choice1_3;
+    QRadioButton * gsettings_choice1_4;
     
     // Choice 2: volume slider
     QVBoxLayout * gsettings_layout_volumebox;

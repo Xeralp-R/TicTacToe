@@ -56,9 +56,13 @@ GameSettings::GameSettings(QMediaPlayer * player,
     gsettings_subtitle1->setObjectName("subtitle");
     gsettings_subtitle1->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
     gsettings_choice1_1 = new QRadioButton("Regular Mode", gsettings_choice1box);
-    gsettings_choice1_1->setObjectName("rad_butn1");
+    gsettings_choice1_1->setObjectName("rad_butn");
     gsettings_choice1_2 = new QRadioButton("Tournament Mode", gsettings_choice1box);
-    gsettings_choice1_2->setObjectName("rad_butn2");
+    gsettings_choice1_2->setObjectName("rad_butn");
+    gsettings_choice1_3 = new QRadioButton("Against Brent's Robot", gsettings_choice1box);
+    gsettings_choice1_3->setObjectName("rad_butn");
+    gsettings_choice1_4 = new QRadioButton("Against Random Robot", gsettings_choice1box);
+    gsettings_choice1_4->setObjectName("rad_butn");
     // set things as checked as necessary
     switch (old_style) {
         case GameOptions::NullGame:
@@ -67,6 +71,12 @@ GameSettings::GameSettings(QMediaPlayer * player,
             break;
         case GameOptions::TourneyGame:
             gsettings_choice1_2->setChecked(true);
+            break;
+        case GameOptions::BrentRobotGame:
+            gsettings_choice1_3->setChecked(true);
+            break;
+        case GameOptions::RandRobotGame:
+            gsettings_choice1_4->setChecked(true);
             break;
         default:
             // I'm not sure what to do here
@@ -78,6 +88,8 @@ GameSettings::GameSettings(QMediaPlayer * player,
     gsettings_layout_choice1box->addWidget(gsettings_subtitle1);
     gsettings_layout_choice1box->addWidget(gsettings_choice1_1);
     gsettings_layout_choice1box->addWidget(gsettings_choice1_2);
+    gsettings_layout_choice1box->addWidget(gsettings_choice1_3);
+    gsettings_layout_choice1box->addWidget(gsettings_choice1_4);
     
     // Set Volume
     gsettings_volumebox = new QWidget(this);
@@ -122,6 +134,8 @@ GameSettings::GameSettings(QMediaPlayer * player,
             player, SLOT(setVolume(int)));
     connect(gsettings_choice1_1, SIGNAL(clicked()), this, SLOT(clicked_sologame()));
     connect(gsettings_choice1_2, SIGNAL(clicked()), this, SLOT(clicked_tourneygame()));
+    connect(gsettings_choice1_3, SIGNAL(clicked()), this, SLOT(clicked_brentrbtgame()));
+    connect(gsettings_choice1_4, SIGNAL(clicked()), this, SLOT(clicked_randrbtgame()));
     //title->music_player, SLOT(setVolume(int)));
 }
 
@@ -131,6 +145,14 @@ void GameSettings::clicked_sologame() {
 
 void GameSettings::clicked_tourneygame() {
     this->current_style = GameOptions::TourneyGame;
+}
+
+void GameSettings::clicked_brentrbtgame() {
+    this->current_style = GameOptions::BrentRobotGame;
+}
+
+void GameSettings::clicked_randrbtgame() {
+    this->current_style = GameOptions::RandRobotGame;
 }
 
 GameOptions GameSettings::getGameOption() {

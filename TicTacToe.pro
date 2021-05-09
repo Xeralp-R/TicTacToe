@@ -15,7 +15,8 @@ SOURCES += \
     tttgame.cpp \
     victory.cpp \
     draw.cpp \
-    tourneygame.cpp
+    tourneygame.cpp \
+    robotgame.cpp
 
 HEADERS += \
     helpscreen.h \
@@ -26,7 +27,10 @@ HEADERS += \
     tttgame.hpp \
     victory.hpp \
     draw.hpp \
-    tourneygame.hpp
+    tourneygame.hpp \
+    gameoptions.hpp \
+    robotoptions.h \
+    robotgame.hpp
 
 DISTFILES += \
     TicTacToe.xcodeproj

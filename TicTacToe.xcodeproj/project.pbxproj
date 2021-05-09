@@ -166,6 +166,21 @@
 					);
 			};
 		};
+		58CF595F3AD66555B457DBA6 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/robotgame.cpp";
+			name = "robotgame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		E13B1E1200E352CAB280CE04 = {
+			fileRef = "58CF595F3AD66555B457DBA6";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
 		11289CD9957D6346E0E29424 = {
 			isa = PBXFileReference;
 			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/qrc_overarching.cpp";
@@ -316,6 +331,21 @@
 					);
 			};
 		};
+		10529429B50208421EBE3A23 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_robotgame.cpp";
+			name = "moc_robotgame.cpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.cpp.cpp";
+		};
+		ED2DA7F93EC460FACE950C6F = {
+			fileRef = "10529429B50208421EBE3A23";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
 		39B374EECC832CB4802EF014 = {
 			isa = PBXFileReference;
 			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/helpscreen.h";
@@ -379,6 +409,27 @@
 			sourceTree = "<absolute>";
 			lastKnownFileType = "sourcecode.c.h";
 		};
+		3E07C0F2095C3D419A81C9F1 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/gameoptions.hpp";
+			name = "gameoptions.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		03768C35639BFDF025DF93CA = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/robotoptions.h";
+			name = "robotoptions.h";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
+		7D1099AB0E00F38A9155594F = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/robotgame.hpp";
+			name = "robotgame.hpp";
+			sourceTree = "<absolute>";
+			lastKnownFileType = "sourcecode.c.h";
+		};
 		8B3FE97C47A628FE14C888C7 = {
 			isa = PBXFileReference;
 			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/overarching.qrc";
@@ -434,7 +485,8 @@
 				"3BD51935CDFB27F82BC2A7EC",
 				"649841CA0C063E430F8C028A",
 				"EE59473F131B0D48EBACE21C",
-				"24F825D6FE22D5853946179D");
+				"24F825D6FE22D5853946179D",
+				"10529429B50208421EBE3A23");
 			name = "Generated Sources";
 			sourceTree = "<group>";
 		};
@@ -458,6 +510,7 @@
 				"CA4FBA33CE2C73B981023BDF",
 				"A32E2143145FA47AFB83862F",
 				"20CA500116EC6D29C43D3E7A",
+				"58CF595F3AD66555B457DBA6",
 				"39B374EECC832CB4802EF014",
 				"6A03AE140EAA7D806D4EB839",
 				"3254BA99D7455C6F209D9F89",
@@ -466,7 +519,10 @@
 				"8ABD7894E592736304370821",
 				"3EEE8C03D3E0CFB76B3E3A9D",
 				"FBEA0D9B6FB330642935DEB2",
-				"1C27B6BD39CD736661EC6FD9");
+				"1C27B6BD39CD736661EC6FD9",
+				"3E07C0F2095C3D419A81C9F1",
+				"03768C35639BFDF025DF93CA",
+				"7D1099AB0E00F38A9155594F");
 			name = "Sources";
 			sourceTree = "<group>";
 		};
@@ -509,6 +565,7 @@
 				"72CE09AD277C1A340DC05E8B",
 				"017531FFD36A07431C2DEDC6",
 				"A7740F26D89FD59E415A8A2F",
+				"E13B1E1200E352CAB280CE04",
 				"92DC8C267DA16B6564333974",
 				"53CD322A169E37F7CC4BC7F3",
 				"E0E44593EFB7F096D568251E",
@@ -519,6 +576,7 @@
 				"3BA7F5AED27B86A53E4A7BEF",
 				"74BC356409461F39659FC053",
 				"7E5E4187CC2D39C8F7F7F349",
+				"ED2DA7F93EC460FACE950C6F",
 				"011868899A1B3382E0C0973E");
 			isa = PBXSourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;

@@ -132,8 +132,8 @@ private:
     void call_victor(Players winning_player);
     
     // ==> Procedendo Screens
-    VictoryScreen * victory_screen;
-    DrawScreen * draw_screen;
+    //VictoryScreen * victory_screen;
+    //DrawScreen * draw_screen;
 };
 
 #endif /* tttgame_hpp */
