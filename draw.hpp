@@ -56,4 +56,21 @@ private:
     QPushButton * button_finish;
 };
 
+class RobotLossScreen : public QWidget {
+    Q_OBJECT
+public:
+    explicit RobotLossScreen(QWidget * parent = nullptr);
+signals:
+    void back_to_title();
+private:
+    // ==> Visible Variables
+    QVBoxLayout * layout_general;
+    QLabel * titlebox;
+    QLabel * alsotitlebox;
+    QLabel * textbox;
+    QHBoxLayout * layout_buttons;
+    QPushButton * button_play;
+    QPushButton * button_finish;
+};
+
 #endif /* draw_hpp */

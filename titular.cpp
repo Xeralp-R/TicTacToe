@@ -4,6 +4,7 @@
 #include "aboutus.hpp"
 #include "tttgame.hpp"
 #include "gameoptions.hpp"
+#include "robotoptions.h"
 
 #include <QPushButton>
 #include <QApplication>
@@ -100,12 +101,17 @@ Titular::Titular(QWidget *parent) : QWidget(parent)
 void Titular::on_button_game_clicked() {
     switch (game_option) {
         case GameOptions::SoloGame:
-            solo_game_init();
+            this->solo_game_init();
             break;
         case GameOptions::TourneyGame:
-            tourney_game_init();
+            this->tourney_game_init();
+            break;
+        case GameOptions::BrentRobotGame:
+        case GameOptions::RandRobotGame:
+            this->robot_game_init();
             break;
         default:
+            // I'm not sure what to place here. Again.
             break;
     }
 }
@@ -130,6 +136,29 @@ void Titular::tourney_game_init() {
     connect(tourney_game, SIGNAL(to_grand_victory(int)), this, SLOT(grand_victory(int)));
     connect(tourney_game, SIGNAL(to_grand_draw()), this, SLOT(grand_draw()));
     tourney_game->show();
+    this->hide();
+}
+
+void Titular::robot_game_init() {
+    RobotOptions opt;
+    switch (game_option) {
+        case GameOptions::RandRobotGame:
+            opt = RobotOptions::RandoBot;
+            break;
+        case GameOptions::BrentRobotGame:
+        default:
+            opt = RobotOptions::BrentyBot;
+            break;
+    }
+    robot_game = new RobotGame(this->player_names[1],
+                               this->player_names[2],
+                               this->player_chars[1],
+                               this->player_chars[2],
+                               opt);
+    connect(robot_game, SIGNAL(go_to_victory()), this, SLOT(antirobot_victory()));
+    connect(robot_game, SIGNAL(go_to_draw()), this, SLOT(antirobot_draw()));
+    connect(robot_game, SIGNAL(go_to_loss()), this, SLOT(antirobot_loss()));
+    robot_game->show();
     this->hide();
 }
 
@@ -236,6 +265,40 @@ void Titular::grand_draw() {
     this->hide();
 }
 
+void Titular::antirobot_victory() {
+    robot_game->hide();
+    delete robot_game;
+    robot_game = nullptr;
+    
+    // just reusing the code from solo victory
+    // I don't think I need to make a new one
+    victory_screen = new VictoryScreen(player_names[1], 1);
+    connect(victory_screen, SIGNAL(back_to_title()), this, SLOT(from_victory()));
+    victory_screen->show();
+    this->hide();
+}
+
+void Titular::antirobot_draw() {
+    robot_game->hide();
+    delete robot_game;
+    robot_game = nullptr;
+    
+    // reusing the code from solo draw
+    draw_screen = new DrawScreen(player_names[1], "The Robot");
+    connect(draw_screen, SIGNAL(back_to_title()), this, SLOT(from_draw()));
+    draw_screen->show();
+    this->hide();
+}
+
+void Titular::antirobot_loss() {
+    robot_game->hide();
+    delete robot_game;
+    robot_game = nullptr;
+    
+    robot_loss_screen = new RobotLossScreen();
+    connect(robot_loss_screen, SIGNAL(back_to_title()), this, SLOT(from_antirobot_loss()));
+}
+
 // ==> On back from stuff
 
 void Titular::on_back_from_game() {
@@ -300,5 +363,12 @@ void Titular::from_grand_victory() {
 void Titular::from_grand_draw() {
     delete grand_draw_screen;
     grand_draw_screen = nullptr;
+    this->show();
+}
+
+void Titular::from_antirobot_loss() {
+    robot_loss_screen->hide();
+    delete robot_loss_screen;
+    robot_loss_screen = nullptr;
     this->show();
 }

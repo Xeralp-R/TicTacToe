@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/robotgame.cpp \
+  /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_robotgame.cpp \
   robotgame.hpp tttgame.hpp victory.hpp \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
@@ -91,16 +91,4 @@ dependencies: \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers/qicon.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-  robotoptions.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QLabel \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qlabel.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qframe.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QVBoxLayout \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qboxlayout.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qlayout.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qlayoutitem.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qgridlayout.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QGridLayout \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QFile \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qfile.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qfiledevice.h
+  robotoptions.h

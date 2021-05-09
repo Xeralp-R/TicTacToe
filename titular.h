@@ -11,6 +11,8 @@
 #include "victory.hpp"
 #include "draw.hpp"
 #include "tourneygame.hpp"
+#include "robotoptions.h"
+#include "robotgame.hpp"
 
 #include <QWidget>
 #include <QString>
@@ -57,6 +59,11 @@ private slots:
     void from_grand_victory();
     void grand_draw();
     void from_grand_draw();
+    
+    void antirobot_victory();
+    void antirobot_draw();
+    void antirobot_loss();
+    void from_antirobot_loss();
 private:
     // ==> Visible Things
     QFrame * line;
@@ -85,10 +92,13 @@ private:
     GrandVictoryScreen * grand_victory_screen;
     GrandDrawScreen * grand_draw_screen;
     TourneyGame * tourney_game;
+    RobotGame * robot_game;
+    RobotLossScreen * robot_loss_screen;
     
     // ==> Functions
     void solo_game_init();
     void tourney_game_init();
+    void robot_game_init();
     
     // ==> Invisible Things: Variables
     QString PlayerName1 = "Adam";

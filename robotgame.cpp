@@ -8,23 +8,177 @@
 #include "robotgame.hpp"
 #include "tttgame.hpp"
 #include "victory.hpp"
+#include "robotoptions.h"
 
 #include <QPushButton>
 #include <QLabel>
 #include <QVBoxLayout>
 #include <QGridLayout>
-#include <iostream>
 #include <QFile>
 #include <QString>
 
+#include <iostream>
+#include <random>
+#include <chrono>
+
+// return the pointer to the robot
+RobotInterface * RobotInterface::CreateRobotPointer(RobotOptions given_option) {
+    switch (given_option) {
+        case RobotOptions::RandoBot:
+            return new RandoRobot;
+            break;
+        default:
+            return new BrentRobot;
+            break;
+    }
+}
+
+// the brent robot's thing
+void BrentRobot::robot_move (std::array<TTTButton *, 9> & array_buttons, int turn_no) {
+    try {
+        switch (turn_no) {
+            case 1:
+                move_1(array_buttons);
+                break;
+            case 2:
+                move_2(array_buttons);
+                break;
+            case 3:
+                move_3(array_buttons);
+                break;
+            case 4:
+                move_4(array_buttons);
+                break;
+            default:
+                throw "absurd move number";
+                break;
+        }
+    } catch (const char * e) {
+        std::cerr << "exception: " << e << "\n";
+        return;
+    }
+}
+
+// the first move
+// by brent
+void BrentRobot::move_1 (std::array<TTTButton *, 9> & array_buttons) {
+    if (array_buttons[2]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[2]->setPlayer(Players::PlayerTwo);
+    }
+    else
+    {
+        array_buttons[4]->setPlayer(Players::PlayerTwo);
+    }
+}
+
+// the second move
+void BrentRobot::move_2 (std::array<TTTButton *, 9> & array_buttons) {
+    if (array_buttons[5]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[5]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[8]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[8]->setPlayer(Players::PlayerTwo);
+    }
+    else
+    {
+        array_buttons[4]->setPlayer(Players::PlayerTwo);
+    }
+}
+
+// the 3rd move
+void BrentRobot::move_3 (std::array<TTTButton *, 9> & array_buttons) {
+    if (array_buttons[8]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[8]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[0]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[0]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[1]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[1]->setPlayer(Players::PlayerTwo);
+    }
+    else
+    {
+        array_buttons[4]->setPlayer(Players::PlayerTwo);
+    }
+}
+
+// the 4th move
+void BrentRobot::move_4 (std::array<TTTButton *, 9> & array_buttons) {
+    if (array_buttons[3]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[3]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[6]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[6]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[0]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[0]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[1]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[1]->setPlayer(Players::PlayerTwo);
+    }
+    else if (array_buttons[7]->getPlayer() == Players::NullPlayer)
+    {
+        array_buttons[7]->setPlayer(Players::PlayerTwo);
+    }
+    else
+    {
+        array_buttons[4]->setPlayer(Players::PlayerTwo);
+    }
+}
+
+// the randobot
+
+void RandoRobot::robot_move(std::array<TTTButton *, 9> & array_buttons, int turn_no) {
+    // copied from mastermind.cpp
+    // gets the number of seconds
+    // since a long, long, time ago
+    uint32_t now = std::chrono::duration_cast<std::chrono::seconds>(
+        std::chrono::system_clock::now().time_since_epoch()
+    ).count() + turn_no;
+    // I don't know what this is–
+    // does it set up the random number generator?
+    typedef std::mt19937 MyRNG;  // the Mersenne Twister with a popular choice of parameters
+    MyRNG rand_no_gen;
+    rand_no_gen.seed(now);
+    // this apparently sets up the distribution.
+    std::uniform_int_distribution<uint32_t> uint_dist6(0,8); // range [0,8]?
+    // now, let's get our number!
+    auto dice_maybe = std::bind(uint_dist6, rand_no_gen);
+    while (true) {
+        int rand_no = dice_maybe();
+        if (array_buttons[rand_no]->getPlayer() == Players::NullPlayer) {
+            array_buttons[rand_no]->setPlayer(Players::PlayerTwo);
+            break;
+        }
+    }
+}
+
+// ==> The Game Itself
+
 // The actual constructor: delete after debugging
 RobotGame::RobotGame(QString player_name,
-                 QChar player_char,
-                 QWidget * parent) : QWidget(parent) {
+                     QString robot_name,
+                     QChar player_char,
+                     QChar robot_char,
+                     RobotOptions given_robot,
+                     QWidget * parent) : QWidget(parent) {
     player_names[1] = player_name;
+    player_names[2] = robot_name;
     player_tokens[1] = player_char;
+    player_tokens[2] = robot_char;
+    robot_option = given_robot;
     
-    int title_fixed_height = 40;
+    const int title_fixed_height = 40;
     
     // prepare the screen
     setMinimumSize(600, 450);
@@ -53,9 +207,12 @@ RobotGame::RobotGame(QString player_name,
     layout_general->addWidget(title);
     layout_general->addLayout(layout_buttons);
     
+    // prepare the robot
+    robot_pointer = RobotInterface::CreateRobotPointer(robot_option);
     
     // TODO: Define the QChar and QString vecotrs with the names
     // as inputted.
+    turn_number = 0;
     
     // invoke the first call
     output();
@@ -65,13 +222,14 @@ void RobotGame::output() {
     // constants
     QSize button_fixed_size (110, 110);
     
+    turn_number += 1;
+    
     // switch the current player to the other guy
     try {
         // format each of the buttons accordingly
         for (int i = 0; i < 9; ++i) {
             format_button(array_buttons[i]);
             array_buttons[i]->setFixedSize(button_fixed_size);
-            
         }
     } catch (char const* e) {
         std::cerr << "exception: " << e << "\n";
@@ -129,11 +287,15 @@ void RobotGame::format_button(TTTButton * button) {
 void RobotGame::button_clicked() {
     TTTButton * button_sender = static_cast<TTTButton *>(sender());
     if (button_sender->getPlayer() == Players::NullPlayer) {
-        button_sender->setPlayer(current_player);
+        button_sender->setPlayer(Players::PlayerOne);
         check_end();
         if (!has_ended) {
-            output();
-            
+            // this should do the robot bit
+            robot_pointer->robot_move(array_buttons, turn_number);
+            check_end();
+            if (!has_ended) {
+                output();
+            }
         }
     }
 }

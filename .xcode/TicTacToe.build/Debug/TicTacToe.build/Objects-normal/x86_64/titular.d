@@ -122,7 +122,7 @@ dependencies: \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers/qicon.h \
-  tourneygame.hpp \
+  tourneygame.hpp robotoptions.h robotgame.hpp \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QApplication \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qapplication.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qcoreapplication.h \

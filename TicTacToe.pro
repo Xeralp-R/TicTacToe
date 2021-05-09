@@ -28,6 +28,8 @@ HEADERS += \
     victory.hpp \
     draw.hpp \
     tourneygame.hpp \
+    gameoptions.hpp \
+    robotoptions.h \
     robotgame.hpp
 
 DISTFILES += \
