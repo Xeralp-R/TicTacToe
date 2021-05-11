@@ -1,6 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>fonts/SIFONN.otf</file>
+        <file>fonts/Quicksand-Regular.ttf</file>
+        <file>fonts/Quicksand-Bold.ttf</file>
+        <file>fonts/Everson-Mono-Unicode-Regular.ttf</file>
         <file>music/Elephant.mp3</file>
         <file>music/Elephant.wav</file>
         <file>styles/titular.qss</file>

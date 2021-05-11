@@ -57,7 +57,10 @@ qrc_overarching.cpp: overarching.qrc \
 		styles/helpscreen.qss \
 		music/Elephant.wav \
 		music/Elephant.mp3 \
-		fonts/SIFONN.otf
+		fonts/SIFONN.otf \
+		fonts/Quicksand-Regular.ttf \
+		fonts/Quicksand-Bold.ttf \
+		fonts/Everson-Mono-Unicode-Regular.ttf
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/rcc -name overarching overarching.qrc -o qrc_overarching.cpp
 
 compiler_moc_predefs_make_all: moc_predefs.h
@@ -71,7 +74,6 @@ compiler_moc_header_clean:
 	-$(DEL_FILE) moc_helpscreen.cpp moc_titular.cpp moc_gamesettings.cpp moc_playersettings.cpp moc_aboutus.cpp moc_tttgame.cpp moc_victory.cpp moc_draw.cpp moc_tourneygame.cpp moc_robotgame.cpp
 moc_helpscreen.cpp: helpscreen.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib helpscreen.h -o moc_helpscreen.cpp
@@ -79,25 +81,21 @@ moc_helpscreen.cpp: helpscreen.h \
 moc_titular.cpp: titular.h \
 		helpscreen.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		gamesettings.h \
 		gameoptions.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/QMediaPlayer \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediaplayer.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QSlider \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
 		playersettings.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qchar.h \
 		aboutus.hpp \
 		tttgame.hpp \
 		victory.hpp \
 		draw.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		tourneygame.hpp \
+		robotoptions.h \
+		robotgame.hpp \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib titular.h -o moc_titular.cpp
@@ -105,29 +103,22 @@ moc_titular.cpp: titular.h \
 moc_gamesettings.cpp: gamesettings.h \
 		gameoptions.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/QMediaPlayer \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers/qmediaplayer.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QSlider \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qslider.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib gamesettings.h -o moc_gamesettings.cpp
 
 moc_playersettings.cpp: playersettings.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qchar.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib playersettings.hpp -o moc_playersettings.cpp
 
 moc_aboutus.cpp: aboutus.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib aboutus.hpp -o moc_aboutus.cpp
@@ -135,32 +126,24 @@ moc_aboutus.cpp: aboutus.hpp \
 moc_tttgame.cpp: tttgame.hpp \
 		victory.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		draw.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qchar.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib tttgame.hpp -o moc_tttgame.cpp
 
 moc_victory.cpp: victory.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib victory.hpp -o moc_victory.cpp
 
 moc_draw.cpp: draw.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib draw.hpp -o moc_draw.cpp
@@ -169,14 +152,10 @@ moc_tourneygame.cpp: tourneygame.hpp \
 		tttgame.hpp \
 		victory.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		draw.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qchar.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
 	/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc $(DEFINES) --include /Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/moc_predefs.h -I/Users/mariquitreventar/Qt/5.15.2/clang_64/mkspecs/macx-clang -I/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtMultimedia.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtGui.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtNetwork.framework/Headers -I/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/10.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include -F/Users/mariquitreventar/Qt/5.15.2/clang_64/lib tourneygame.hpp -o moc_tourneygame.cpp
@@ -185,14 +164,10 @@ moc_robotgame.cpp: robotgame.hpp \
 		tttgame.hpp \
 		victory.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QWidget \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qwidget.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QString \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qstring.h \
 		draw.hpp \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QPushButton \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qpushbutton.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QChar \
-		/Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qchar.h \
 		robotoptions.h \
 		moc_predefs.h \
 		/Users/mariquitreventar/Qt/5.15.2/clang_64/bin/moc
