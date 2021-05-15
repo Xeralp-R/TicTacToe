@@ -6,6 +6,8 @@
         <file>fonts/Everson-Mono-Unicode-Regular.ttf</file>
         <file>music/Elephant.mp3</file>
         <file>music/Elephant.wav</file>
+        <file>music/Rex_Playlist.mp3</file>
+        <file>music/Brent_Playlist.mp3</file>
         <file>styles/titular.qss</file>
         <file>styles/helpscreen.qss</file>
         <file>styles/gamesettings.qss</file>

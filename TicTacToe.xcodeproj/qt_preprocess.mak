@@ -57,6 +57,8 @@ qrc_overarching.cpp: overarching.qrc \
 		styles/helpscreen.qss \
 		music/Elephant.wav \
 		music/Elephant.mp3 \
+		music/Rex_Playlist.mp3 \
+		music/Brent_Playlist.mp3 \
 		fonts/SIFONN.otf \
 		fonts/Quicksand-Regular.ttf \
 		fonts/Quicksand-Bold.ttf \

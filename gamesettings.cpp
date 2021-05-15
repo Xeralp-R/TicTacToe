@@ -30,15 +30,21 @@
 #include <QFile>
 // strings for the styles to go somewhere
 #include <QString>
+// the grouping box
+#include <QGroupBox>
 
 GameSettings::GameSettings(QMediaPlayer * player,
                            GameOptions old_style,
+                           PlaylistOptions old_playlist,
                            QWidget *parent) : QWidget(parent) {
     const int text_max_height = 40;
     const int button_max_height = 50;
     const int title_text_max_height = 100;
     //const int regul_text_max_height = 150;
     const int slider_min_width = 450;
+    
+    current_style = old_style;
+    current_playlist = old_playlist;
     
     setMinimumSize(600, 450);
     setWindowTitle("Game Settings");
@@ -50,7 +56,7 @@ GameSettings::GameSettings(QMediaPlayer * player,
     gsettings_title->setObjectName("title");
     
     // Pick Game Mode
-    gsettings_choice1box = new QWidget(this);
+    gsettings_choice1box = new QGroupBox(this);
     gsettings_subtitle1 = new QLabel("Please pick your game mode:", gsettings_choice1box);
     gsettings_subtitle1->setMaximumHeight(text_max_height);
     gsettings_subtitle1->setObjectName("subtitle");
@@ -65,7 +71,7 @@ GameSettings::GameSettings(QMediaPlayer * player,
     gsettings_choice1_4->setObjectName("rad_butn");
     // set things as checked as necessary
     switch (old_style) {
-        case GameOptions::NullGame:
+        //case GameOptions::NullGame:
         case GameOptions::SoloGame:
             gsettings_choice1_1->setChecked(true);
             break;
@@ -91,7 +97,46 @@ GameSettings::GameSettings(QMediaPlayer * player,
     gsettings_layout_choice1box->addWidget(gsettings_choice1_3);
     gsettings_layout_choice1box->addWidget(gsettings_choice1_4);
     
-    // Set Volume
+    // ==> Set the playlist
+    // subtitle
+    playlist_subtitle = new QLabel("Please pick your playlist");
+    playlist_subtitle->setMaximumHeight(text_max_height);
+    playlist_subtitle->setObjectName("subtitle");
+    playlist_subtitle->setAlignment(Qt::AlignHCenter | Qt::AlignTop);
+    // choice 1: Rex
+    playlist_choice1 = new QRadioButton();
+    playlist_choice1->setText("Rex's Playlist");
+    playlist_choice1->setToolTip("Classical: Excerpts from Camille Saint Saens' "
+                                 "Carnival of the Animals");
+    playlist_choice1->setObjectName("radbutn");
+    // choice 2: Brent
+    playlist_choice2 = new QRadioButton();
+    playlist_choice2->setText("Brent's Playlist");
+    playlist_choice2->setToolTip("Modern: Excerpts from the games Cytus "
+                                 "and Glow, and the cartoon Jojo's Bizzare Adventure");
+    playlist_choice2->setObjectName("radbutn");
+    // switch the current choice
+    switch (old_playlist) {
+        case PlaylistOptions::RexPlaylist:
+            playlist_choice1->setChecked(true);
+            break;
+        case PlaylistOptions::BrentPlaylist:
+            playlist_choice2->setChecked(true);
+            break;
+        default:
+            // I really have no idea for what to do here
+            break;
+    }
+    // the vboxlayout
+    playlist_layout = new QVBoxLayout();
+    playlist_layout->addWidget(playlist_subtitle);
+    playlist_layout->addWidget(playlist_choice1);
+    playlist_layout->addWidget(playlist_choice2);
+    // the box
+    playlist_box = new QGroupBox();
+    playlist_box->setLayout(playlist_layout);
+    
+    // ==> Set Volume
     gsettings_volumebox = new QWidget(this);
     gsettings_subtitle2 = new QLabel("Please set the volume:");
     gsettings_subtitle2->setMaximumHeight(text_max_height);
@@ -118,6 +163,7 @@ GameSettings::GameSettings(QMediaPlayer * player,
     gsettings_layout_general = new QVBoxLayout(this);
     gsettings_layout_general->addWidget(gsettings_title);
     gsettings_layout_general->addWidget(gsettings_choice1box);
+    gsettings_layout_general->addWidget(playlist_box);
     gsettings_layout_general->addWidget(gsettings_volumebox);
     gsettings_layout_general->addWidget(gsettings_button_home);
     
@@ -136,6 +182,8 @@ GameSettings::GameSettings(QMediaPlayer * player,
     connect(gsettings_choice1_2, SIGNAL(clicked()), this, SLOT(clicked_tourneygame()));
     connect(gsettings_choice1_3, SIGNAL(clicked()), this, SLOT(clicked_brentrbtgame()));
     connect(gsettings_choice1_4, SIGNAL(clicked()), this, SLOT(clicked_randrbtgame()));
+    connect(playlist_choice1, SIGNAL(clicked()), this, SLOT(clicked_rexplaylist()));
+    connect(playlist_choice2, SIGNAL(clicked()), this, SLOT(clicked_brentplaylist()));
     //title->music_player, SLOT(setVolume(int)));
 }
 
@@ -155,6 +203,20 @@ void GameSettings::clicked_randrbtgame() {
     this->current_style = GameOptions::RandRobotGame;
 }
 
+void GameSettings::clicked_rexplaylist() {
+    this->current_playlist = PlaylistOptions::RexPlaylist;
+    emit play_rex_playlist();
+}
+
+void GameSettings::clicked_brentplaylist() {
+    this->current_playlist = PlaylistOptions::BrentPlaylist;
+    emit play_brent_playlist();
+}
+
 GameOptions GameSettings::getGameOption() {
     return this->current_style;
+}
+
+PlaylistOptions GameSettings::getPlaylistOption() {
+    return this->current_playlist;
 }

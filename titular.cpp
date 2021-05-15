@@ -33,7 +33,7 @@ Titular::Titular(QWidget *parent) : QWidget(parent)
     button_to_sett = new QPushButton("Game Settings", this);
     button_to_cust = new QPushButton("Player Settings", this);
     button_to_abts = new QPushButton("About Us", this);
-    button_to_lore = new QPushButton("Credits", this);
+    button_to_lore = new QPushButton("Lore", this);
     // set the qualified names
     button_to_game->setObjectName("button_to_game");
     button_to_help->setObjectName("button_to_help");
@@ -74,12 +74,16 @@ Titular::Titular(QWidget *parent) : QWidget(parent)
     this->setStyleSheet(string_titular);
 
     // /*
-    music_playlist = new QMediaPlaylist();
-    music_playlist->addMedia(QUrl("qrc:/music/Elephant.wav"));
-    music_playlist->setPlaybackMode(QMediaPlaylist::Loop);
+    rex_playlist = new QMediaPlaylist();
+    rex_playlist->addMedia(QUrl("qrc:/music/Rex_Playlist.mp3"));
+    rex_playlist->setPlaybackMode(QMediaPlaylist::Loop);
+    
+    brent_playlist = new QMediaPlaylist();
+    brent_playlist->addMedia(QUrl("qrc:/music/Brent_Playlist.mp3"));
+    brent_playlist->setPlaybackMode(QMediaPlaylist::Loop);
 
     music_player = new QMediaPlayer();
-    music_player->setPlaylist(music_playlist);
+    music_player->setPlaylist(rex_playlist);
     music_player->setVolume(50);
     music_player->play();
     //*/
@@ -170,10 +174,12 @@ void Titular::on_button_help_clicked() {
 }
 
 void Titular::on_button_sett_clicked() {
-    game_settings = new GameSettings(this->music_player, this->game_option);
-    //game_settings_nptr.gs_music_player = this->music_player;
-    //connect(game_settings->gsettings_volumeslider1, SIGNAL(valueChanged(int)), this->music_player, SLOT(setVolume(int)));
+    game_settings = new GameSettings(this->music_player,
+                                     this->game_option,
+                                     this->playlist_option);
     connect(game_settings, SIGNAL(back_to_home()), this, SLOT(on_back_from_sett()));
+    connect(game_settings, SIGNAL(play_rex_playlist()), this, SLOT(do_play_rex_playlist()));
+    connect(game_settings, SIGNAL(play_brent_playlist()), this, SLOT(do_play_brent_playlist()));
     game_settings->show();
     this->hide();
 }
@@ -201,6 +207,18 @@ void Titular::on_button_lore_clicked() {
 }
 
 // ==> intermediate
+
+void Titular::do_play_rex_playlist() {
+    music_player->stop();
+    music_player->setPlaylist(rex_playlist);
+    music_player->play();
+}
+
+void Titular::do_play_brent_playlist() {
+    music_player->stop();
+    music_player->setPlaylist(brent_playlist);
+    music_player->play();
+}
 
 void Titular::solo_victory(int num) {
     delete ttt_game;
@@ -315,6 +333,7 @@ void Titular::on_back_from_help() {
 
 void Titular::on_back_from_sett() {
     this->game_option = game_settings->getGameOption();
+    this->playlist_option = game_settings->getPlaylistOption();
     delete game_settings;
     game_settings = nullptr;
     this->show();

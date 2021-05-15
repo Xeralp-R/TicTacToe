@@ -141,4 +141,6 @@ dependencies: \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qframe.h \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/QFile \
   /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qfile.h \
-  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qfiledevice.h
+  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtCore.framework/Headers/qfiledevice.h \
+  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/QGroupBox \
+  /Users/mariquitreventar/Qt/5.15.2/clang_64/lib/QtWidgets.framework/Headers/qgroupbox.h

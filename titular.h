@@ -34,7 +34,8 @@ class Titular : public QWidget
 public:
     explicit Titular(QWidget *parent = nullptr);
     QMediaPlayer * music_player;
-    QMediaPlaylist * music_playlist;
+    QMediaPlaylist * rex_playlist;
+    QMediaPlaylist * brent_playlist;
 signals:
 private slots:
     void on_button_game_clicked();
@@ -64,6 +65,9 @@ private slots:
     void antirobot_draw();
     void antirobot_loss();
     void from_antirobot_loss();
+    
+    void do_play_rex_playlist();
+    void do_play_brent_playlist();
 private:
     // ==> Visible Things
     QFrame * line;
@@ -110,6 +114,7 @@ private:
     std::vector<QChar> player_chars {' ', 'O', 'X'};
     
     GameOptions game_option = GameOptions::SoloGame;
+    PlaylistOptions playlist_option = PlaylistOptions::RexPlaylist;
 };
 
 #endif // TITULAR_H
