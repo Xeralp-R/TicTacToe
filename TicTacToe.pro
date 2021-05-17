@@ -39,5 +39,9 @@ RESOURCES += \
     overarching.qrc
 
 #icons
-win32:RC_ICON += tictactoe.ico
-ICON += tictactoe.icns
+win32 {
+    RC_ICON += tictactoe.ico
+}
+macx {
+    ICON += tictactoe.icns
+}
