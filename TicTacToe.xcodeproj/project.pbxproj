@@ -181,6 +181,20 @@
 					);
 			};
 		};
+		52BEF659462475436557DD40 = {
+			isa = PBXFileReference;
+			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/tictactoe.icns";
+			name = "tictactoe.icns";
+			sourceTree = "<absolute>";
+		};
+		CF94B78A2DE72699410B1D52 = {
+			fileRef = "52BEF659462475436557DD40";
+			isa = PBXBuildFile;
+			settings = {
+				ATTRIBUTES = (
+					);
+			};
+		};
 		11289CD9957D6346E0E29424 = {
 			isa = PBXFileReference;
 			path = "/Users/mariquitreventar/Desktop/ACodes/CPP_Files/QT_Work/TicTacToe/qrc_overarching.cpp";
@@ -511,6 +525,7 @@
 				"A32E2143145FA47AFB83862F",
 				"20CA500116EC6D29C43D3E7A",
 				"58CF595F3AD66555B457DBA6",
+				"52BEF659462475436557DD40",
 				"39B374EECC832CB4802EF014",
 				"6A03AE140EAA7D806D4EB839",
 				"3254BA99D7455C6F209D9F89",
@@ -774,7 +789,7 @@
 		30414803F31797EB689AE508 = {
 			buildActionMask = 2147483647;
 			files = (
-				);
+				"856283891F3218807ACDDA31");
 			isa = PBXResourcesBuildPhase;
 			runOnlyForDeploymentPostprocessing = 0;
 			name = "Copy Bundle Resources";

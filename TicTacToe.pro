@@ -38,3 +38,6 @@ DISTFILES += \
 RESOURCES += \
     overarching.qrc
 
+#icons
+win32:RC_ICON += tictactoe.ico
+ICON += tictactoe.icns
