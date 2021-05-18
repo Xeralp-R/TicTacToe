@@ -15,6 +15,10 @@ albeit Brent was the one who thought of the words.
 
 ### Brent
 
+I worked on most of the lore of the program, for example the tournament lore.
+I worked on the Brent Robot, that fights against the player.
+I had the idea to create an About Us page.
+I contributed with the music playlist.
 ---
 
 ## What help did you get?
@@ -43,6 +47,10 @@ but I find the tutorial unnecessarily complex for a
 tic-tac-toe implementation.
 
 ### Brent
+I received quite alot of help from mostly just Rex.
+I was inexperienced with coding, let anone creating AI that fights against the player.
+Rex was the one who kind of guided me and showed me how.
+Also, without a doubt, Rex was the reason I understood how to make a function.
 
 ---
 
@@ -95,3 +103,14 @@ rather than dwell on further improvement.
 Thank you!
 
 ### Brent
+
+Well, omce I heard Rex say we were gonna make an AI, I thought 
+he was mad, like a mad scientist. Sure enough, he was mad, but
+also knew what he had to do and how to do them. I enjoyed being
+his teammate. In the end, I've learned way more  about coding
+than I thought I would from this project. I understood functions,
+basic A.I and also responsibility. For the changes, I think we started with 
+a program that runs tic-tac-toe, now we have a program that RUNS 
+tic-tac-toe, well basically it's way better. I also enjoyed picking
+out music as me and Rex had a small competition for it but in the end
+chose both. All in all, a fun bonus project for me and Rex.
