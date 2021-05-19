@@ -19,6 +19,7 @@ I worked on most of the lore of the program, for example the tournament lore.
 I worked on the Brent Robot, that fights against the player.
 I had the idea to create an About Us page.
 I contributed with the music playlist.
+
 ---
 
 ## What help did you get?
