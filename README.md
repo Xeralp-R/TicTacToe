@@ -1,10 +1,10 @@
 # TicTacToe
-A Qt implementation of the game Tic Tac Toe
+A Qt implementation of the game Tic Tac Toe. Beta 1.1.
 
 ## Overview
 This project was created in fulfillment of the 
 requirements for bonus points in our CS class.
-For sir, please read [ProjectDocumentation.md](https://github.com/Xeralp-R/TicTacToe/blob/master/ProjectDocumentation.md).
+Project documentation is in [ProjectDocumentation.md](https://github.com/Xeralp-R/TicTacToe/blob/master/ProjectDocumentation.md).
 
 ## Features
 * Decent design
@@ -20,7 +20,7 @@ For sir, please read [ProjectDocumentation.md](https://github.com/Xeralp-R/TicTa
         - The online installer is [here](https://www.qt.io/download-qt-installer?hsCtaTracking=99d9dd4f-5681-48d2-b096-470725510d34%7C074ddad0-fdef-4e53-8aa8-5e8a876d6ab4)
         - The offline installer is [here](https://www.qt.io/offline-installers)
         - Make sure you get the version marked QT5, as this was developed for that version
-        - Remember to export the path correctly: use ` export PATH="$PATH:/wherever/qt/is/installed" ', replacing the words "wherever/qt/is/installed" with wherever Qt is installed on your computer.
+        - Remember to export the path correctly: use ` export PATH="$PATH:/wherever/qt/is/installed" `, replacing the words "wherever/qt/is/installed" with wherever Qt is installed on your computer.
     - Mac:
         - Homebrew: ` brew install qt@5 `
         - MacPorts: ` sudo port install qt5`
@@ -43,8 +43,8 @@ In the future, I might make a DMG file for mac— I will also place it in this r
 
 ## Dependencies
 If you're going to download directly from github, you will need QT to dynamically link it,
-along with a C++ compiler— consider GCC, Clang, or MinGW.
-Else— that is, if you're going to use the dmg— I don't think there are any dependencies.
+along with a C++ compiler like GCC, Clang, or MinGW.
+Otherwise— that is, if you're going to use the dmg— I don't think there are any dependencies.
 
 ## Contributors
 Me and Brent Cristobal of PSHS
