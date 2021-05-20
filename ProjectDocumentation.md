@@ -103,6 +103,9 @@ now would rather look forward to future projects
 rather than dwell on further improvement.
 Thank you!
 
+PS. If the thing crashes, please just reload— I don't know why, but sometimes, it just crashes.
+I have never been able to reproduce that behavior in XCode, so I can't figure out the cause.
+
 ### Brent
 
 Well, omce I heard Rex say we were gonna make an AI, I thought 
